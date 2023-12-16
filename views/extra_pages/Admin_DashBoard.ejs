@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Indian Institute of Technology Jodhpur </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/css_file.css">
+	<link rel="shortcut icon" href="/images\extra\iit_logo.png" type="image/png">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+		<script>
+            function togglepopup(){
+                document.getElementById("popup_1_add_new_quiz").classList.toggle("active")
+                }
+    
+                function toggle_card(i){
+            console.log('toggle')
+            document.getElementById("popup_1_view_card").classList.toggle("active")
+            console.log('hi')
+            document.getElementById("heading_popup").innerHTML=document.getElementById("heading"+i).innerHTML
+            document.getElementById("description_popup").innerHTML=document.getElementById("description"+i).innerHTML
+            document.getElementById("markdown_popup").innerHTML=document.getElementById("markdown"+i).innerHTML
+            }
+
+        function toggle_card_close(){
+            document.getElementById("popup_1_view_card").classList.toggle("active")
+
+
+		
+        }
+        </script>
+</head>
+
+<body>
+	<section id="navbar">
+		<nav class="navbar navbar-expand-lg py-3 navbar-dark  shadow-sm">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					<img src="\images\extra\iit_logo.png" width="70" alt="" class="d-inline-block align-middle mr-2">
+					<!-- Logo Text -->
+					<span class="text-uppercase font-weight-bold">IIT Jodhpur PHC</span>
+				</a>
+
+				<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+					class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+				<div id="navbarSupportedContent" class="collapse navbar-collapse">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item "><a href="/admin/admin_home" class="nav-link">Home <span
+									class="sr-only">(current)</span></a></li>
+						<li class="nav-item"><a href="/admin/createdoctor" class="nav-link">Create New Account</a></li>
+						<li class="nav-item"><a href="/admin/new_announcement" id="downloads-btn" class="nav-link">New Announcement</a></li>
+						<li class="nav-item active"><a href="#" id="contact-us-btn" class="nav-link">Admin</a></li>
+						<li class="nav-item "><a href="/logout" id="contact-us-btn" class="nav-link" onclick="yeet">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<!-- /*..............  NAVBAR END HERE  .........*/ -->
+
+	<div class = "admin_main_cards_container">
+        
+		<h1 class="ann_head">Announcements</h1>
+		<% let i=1 %>
+        <% articles.forEach(element => {%>
+            <div class="performance_cards" onclick=toggle_card(<%= i %>)>
+				<div class="performance_card_box">
+					<div class="performance_card_contents">
+						<h2><%=i  %></h2>
+						<h3 id="heading<%=i  %>"><%=element.title  %></h3>
+						<p id="description<%=i  %>"><%=element.description  %>
+						</p>
+						<hr>
+						<p style="display: none;" id="markdown<%= i %>"><%=element.markdown  %></p>
+						<h5 id="createdBy<%=i  %>"> posted by ( <%=element.createdBy  %> )</h5>
+						<p> on <%=element.createdAt.toLocaleDateString()  %></p>
+						<a href="#">Click Here</a>
+						<form action="/admin/<%=element.id %>?_method=DELETE" method="post" class="d-inline">
+							<button type="submit" class="btn-dang">Delete	</button>
+						</form>
+					</div>
+				</div>
+			</div>
+            <% i=i+1 %>
+
+
+        <%}); %>
+		<div class="ann_head">Statistics</div>
+	<a href="/admin/patientInfo">
+        <div class="performance_cards">
+			<div class="performance_card_box">
+				<div class="performance_card_contents">
+					<h2>01</h2>
+					<h3> Number of patients registered </h3>
+					<p style="font-size: 5em;">
+						<%=no_patients  %>
+					</p>
+				</div>
+			</div>
+        </div>
+	</a>
+
+	<a href="/admin/doctorInfo">
+        <div class="performance_cards">
+			<div class="performance_card_box">
+				<div class="performance_card_contents">
+					<h2>02</h2>
+					<h3> Number of Doctors registered </h3>
+					<p style="font-size: 5em;"><%=no_doctors  %>
+					</p>
+				</div>
+			</div>
+        </div>
+	</a>
+
+    <a href="/admin/staffInfo">
+			<div class="performance_cards">
+			<div class="performance_card_box">
+				<div class="performance_card_contents">
+					<h2>03</h2>
+					<h3> Number of Registered Staff </h3>
+					<p style="font-size: 5em;">
+						<%=no_staff  %>
+					</p>
+				</div>
+			</div>
+        </div>
+	</a>
+
+	<!-- Diagnosis Info -->
+	<a href="/admin/DiagnosisInfo">
+				<div class="performance_cards">
+				<div class="performance_card_box">
+					<div class="performance_card_contents">
+						<h2>04</h2>
+						<h3> Number of Diagnosis Recorded </h3>
+						<p style="font-size: 5em;">
+							<%=no_diagnosis  %>
+							<!-- change this to number of diagnosis -->
+						</p>
+					</div>
+				</div>
+			</div>
+	</a>
+		
+	<!-- Ambulance Info -->
+	<a href="/admin/AmbulanceInfo">
+			<div class="performance_cards">
+			<div class="performance_card_box">
+				<div class="performance_card_contents">
+					<h2>05</h2>
+					<h3> Number of Registered Ambulances </h3>
+					<p style="font-size: 5em;">
+						<%=no_ambulances  %>
+						<!-- change this to number of Ambulances -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</a>
+		
+	<!-- Inventory Info -->
+	<a href="/admin/InventoryInfo">
+					<div class="performance_cards">
+					<div class="performance_card_box">
+						<div class="performance_card_contents">
+							<h2>06</h2>
+							<h3> Number of Inventory Items </h3>
+							<p style="font-size: 5em;">
+								<%=no_inventory  %>
+								<!-- change this to number of Ambulances -->
+							</p>
+						</div>
+					</div>
+				</div>
+	</a>
+
+    </div> 
+
+	<div class="popup_view_card" id="popup_1_view_card">
+        <div class="overlay_view_card"  onclick="toggle_card_close()"></div>
+        	<div class="content_view_card">
+            <div class="close_btn_view_card" onclick="toggle_card_close()">&times;</div>
+            <h1 id="heading_popup">Card Title</h1>
+            <h3 id="description_popup">Card Description</h3>
+            <p id="markdown_popup">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quos tenetur nihil possimus deleniti ab inventore eaque vitae at in eum delectus optio pariatur cum, repudiandae laboriosam officia consequatur explicabo soluta impedit ipsam repellat, aliquid nobis? Consequatur rem vero consectetur.  
+            </p>
+            
+        	</div>
+    </div>
+</body>
+
+</html>

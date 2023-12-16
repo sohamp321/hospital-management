@@ -1,0 +1,1778 @@
+/* CSS PAGE 1 FOR doctor DASHBOARD */
+
+
+/*..............  NAVBAR START .........*/
+body {
+    background-color: rgb(255, 255, 255);
+    color: #514B64;
+    min-height: 100vh;
+  }
+  
+  code {
+    background: #ffffff;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+  }
+  
+  .navbar {
+    background-color: rgb(255, 255, 255);;
+    position: sticky;
+    height: 10%;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 0px;
+    padding-left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .navbar-brand{
+    font-size: 2.0rem!important;
+    font-family: sans-serif;   
+  }
+  
+  .navbar-dark .navbar-brand {
+    color: #995c62;
+  }
+  .navbar-dark .navbar-brand:hover {
+    color: #995c62;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #995c62;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #830612;
+  }
+
+  .mr-2, .mx-2 {
+    margin-right: .9rem!important;
+  }
+  
+  .pb-3, .py-3 {
+    padding-bottom: 0.5rem!important;
+  }
+  .pt-3, .py-3 {
+    padding-top: 0.5rem!important;
+  }
+  
+  /*..............  NAVBAR END HERE  .........*/
+  
+ /* Add a background color to the active dot/circle */
+.active, .dot:hover {
+    background-color: #717171;
+    border-radius: 10px;
+  }
+
+
+
+
+  /*Announcement cards Css starts  */
+
+.hero_doctor{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    position: relative;
+  }
+
+.announcement_cards{
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0,0.3);
+    cursor: pointer;
+}
+
+.announcement_cards h3{
+    font-size: 35px;
+    padding: 5px 0;
+    color: #444;
+}
+
+
+.announcement_cards p{
+    font-size: 15px;
+    /* padding: 5px 0; */
+    color: #777;
+    font-weight: bold;
+}
+
+
+/* .announcement_cards p{
+
+} */
+
+.announcement_cards button{
+    width: 140px;
+    height: 40px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+.announcement_cards button:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.announcement_cards::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.announcement_cards::after{
+    width: 100%;
+    height: 100%;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(15% at 90% 10%);
+    transition: 0.2s;
+}
+
+.announcement_cards .count_ann{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.announcement_cards:nth-child(2)::after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg,#0093e9 0%, #80d0c7 100%);
+}
+
+.announcement_cards:nth-child(3)::after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg,#08aeea 0%, #2af598 100%);
+}
+
+
+.announcement_cards:hover::after{
+    clip-path: circle(100%);
+
+}
+
+.announcement_cards:hover h3,
+.announcement_cards:hover h5{
+color: #ffffff;
+}
+
+.announcement_cards:hover p{
+    color: #ffffff;
+    }
+
+.announcement_cards:hover h5{
+    color: #fff;
+    bottom: 10px;
+}
+
+.ann_head{
+    width: 100%;
+    /* height: 100%; */
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color: #000;
+}
+
+/* Announcement Cards CSS ends */
+
+
+
+/* Quiz cards CSS starts */
+
+.quiz_doctor{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+  }
+
+.quiz_cards{
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0,0.3);
+}
+
+.quiz_cards h3{
+    font-size: 35px;
+    padding: 5px 0;
+    color: #444;
+}
+
+
+.quiz_cards p{
+    font-size: 15px;
+    /* padding: 5px 0; */
+    color: #777;
+    font-weight: bold;
+}
+
+
+.quiz_cards button{
+    width: 140px;
+    height: 40px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+.quiz_cards button:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.quiz_cards::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.quiz_cards::after{
+    width: 100%;
+    height: 100%;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(15% at 90% 10%);
+    transition: 0.2s;
+}
+
+.quiz_cards .count_quiz{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.quiz_cards:nth-child(2)::after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg,#0093e9 0%, #80d0c7 100%);
+}
+
+.quiz_cards:nth-child(3)::after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg,#08aeea 0%, #2af598 100%);
+}
+
+
+.quiz_cards:hover::after{
+    clip-path: circle(100%);
+
+}
+
+.quiz_cards:hover h3{
+color: #ffffff;
+}
+
+.quiz_cards:hover p{
+    color: #ffffff;
+    }
+
+
+.quiz_head{
+    width: 100%;
+    /* height: 100%; */
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color: #000;
+}
+
+
+/* Quiz cards css ends */
+
+
+
+
+
+/* Quiz 1 page CSS Starts here  */
+
+.quiz_doctor_1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+  }
+
+.quiz_cards_1{
+    /* width: 300px;
+    height: 400px; */
+    background-color: #ffffff;
+    width: 90%;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0,0.3);
+}
+
+.quiz_cards_1 h3{
+    font-size: 35px;
+    padding: 5px 0;
+    color: #444;
+}
+
+
+.quiz_cards_1 p{
+    font-size: 15px;
+    /* padding: 5px 0; */
+    color: #777;
+    font-weight: bold;
+}
+
+
+.quiz_cards_1 button{
+    width: 140px;
+    height: 40px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+.quiz_cards_1 button:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.quiz_cards_1::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.quiz_cards_1::after{
+    width: 100%;
+    height: 100%;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(15% at 90% 10%);
+    transition: 0.2s;
+}
+
+.quiz_cards_1 .count_quiz_1{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.quiz_carquiz_cards_1ds:nth-child(2)::after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg,#0093e9 0%, #80d0c7 100%);
+    opacity: 0.4;
+}
+
+.quiz_cards_1:nth-child(3)::after{
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg,#08aeea 0%, #2af598 100%);
+    opacity: 0.4;
+}
+
+
+.quiz_cards_1:hover::after{
+    clip-path: circle(100%);
+
+}
+
+.quiz_cards_1:hover h3{
+color: #000;
+}
+
+.quiz_cards_1:hover p{
+    color: #000;
+    }
+
+
+/* .quiz_head_1{
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color: #000;
+    
+} */
+.quiz_head_1 {
+    width: 100%;
+    /* height: 100%; */
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color: #000;
+    display: block;
+    /* position: relative; */
+    /* padding: 0px 10px; */
+    margin: 0px;
+}
+.options_quiz_doctor_1{
+    /* align-items: left; */
+    text-align: left;
+}
+
+
+.quiz_head_11{
+    /* width: 100%; */
+    /* height: 100%; */
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color: #000;
+    display: inline-block;
+    /* position: relative; */
+
+    
+}
+
+.quiz_1_attempt_btn{
+    /* right: 10px; */
+    font-size: 25px;
+    /* position: relative; */
+    left: 25%;
+    margin-top: 1.7%;
+    margin-bottom: 0%;
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    /* font-weight: bold; */
+}
+
+
+.quiz_head_11_creator{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: left;
+    color: #911818;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
+
+/* Quiz 1 Page CSS ends here */
+
+
+/* Add question CSS starts here  */
+
+.input-group_add_ques{
+    top: 180px;
+    /* position: relative; */
+    margin: auto;
+    margin-top: 1%;
+    width: 90%;
+    transition: .5s;
+    /* padding: 10%; */
+  
+  }
+  
+  .input-field_add_ques{
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #6b6565;
+    outline: none;
+    background: transparent;
+    /* text-align: center; */
+  }
+  .form-box_add_ques .submit-btn_add_ques{
+    width: 65%;
+    padding: 10px 30px;
+    margin-left: 15%;
+    cursor: pointer;
+    display: block;
+    /* margin: auto; */
+    margin-top: 30px;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+  
+  }
+
+  .form-box_add_ques{
+    width: 85%;
+    height: 460px;
+    top: 18%;
+    left: 8%;
+    position: absolute;
+    opacity: 1;
+    margin: 1% auto;
+    background: #a7e0ff;
+    background-image: linear-gradient(40deg , #a7e0ff 0% , #ffb5b5 100%);
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+
+.form-box_add_ques .close_btn_add_ques{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.form-box_add_ques .add_new_ques_head{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #302e2e;
+    padding: 7px;
+    /* display: inline-block; */
+}
+
+
+
+
+/* Add announcement CSS starts here */
+
+
+.input-group_add_ann{
+    top: 180px;
+    margin: auto;
+    margin-top: 1%;
+    width: 90%;
+    transition: .5s;
+  }
+ 
+  .input-field_add_ann_title{
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 5px 0;
+    border-left: 1px solid #6b6565;
+    border-top: 1px solid #6b6565;
+    border-right: 1px solid #6b6565;
+    border-bottom: 1px solid #6b6565;
+    outline: none;
+    border-radius: 20px;
+    background: transparent;
+  }  
+
+  .input-field_add_ann_desc{
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 5px 0;
+    border-left: 1px solid #6b6565;
+    border-top: 1px solid #6b6565;
+    border-right: 1px solid #6b6565;
+    border-bottom: 1px solid #6b6565;
+    outline: none;
+    border-radius: 20px;
+    background: transparent;
+  }
+
+  .input-field_add_ann{
+    width: 100%;
+    height: 165px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 5px 0;
+    border-left: 1px solid #6b6565;
+    border-top: 1px solid #6b6565;
+    border-right: 1px solid #6b6565;
+    border-bottom: 1px solid #6b6565;
+    outline: none;
+    border-radius: 20px;
+    background: transparent;
+  }
+
+
+
+
+  .form-box_add_ann .submit-btn_add_ann{
+    width: 40%;
+    padding: 10px 30px;
+    margin-left: 15%;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+    
+  }
+
+  .form-box_add_ann{
+    width: 85%;
+    height: 460px;
+    top: 18%;
+    left: 8%;
+    position: absolute;
+    justify-content: center;
+    opacity: 1;
+    margin: 1% auto;
+    background: #a7e0ff;
+    background-image: linear-gradient(40deg , #a7e0ff 0% , #ffb5b5 100%);
+    border-radius: 25px;
+    padding: 5px;
+  }
+  
+.form-box_add_ann .close_btn_add_ann{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.form-box_add_ann .add_new_ann_head{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #302e2e;
+    padding: 7px;
+}
+
+
+/* Add Announcement CSS ends here */
+
+
+
+/* Create doctor Account CSS starts here */
+
+.input-group_add_teach{
+    top: 180px;
+    margin: auto;
+    margin-top: 1%;
+    width: 90%;
+    transition: .5s; 
+  }
+  
+  .input-field_add_teach{
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #6b6565;
+    outline: none;
+    background: transparent;
+  }
+  .form-box_add_teach .submit-btn_add_teach{
+    width: 65%;
+    padding: 10px 30px;
+    margin-left: 15%;
+    cursor: pointer;
+    display: block;
+    margin-top: 30px;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+  
+  }
+
+  .form-box_add_teach{
+    width: 85%;
+    height: 460px;
+    top: 18%;
+    left: 8%;
+    position: absolute;
+    opacity: 1;
+    margin: 1% auto;
+    background: #a7e0ff;
+    background-image: linear-gradient(40deg , #ebffee 0% , #63ddff 100%);
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 2px 5px 7px ;
+  }
+  
+
+.form-box_add_teach .close_btn_add_teach{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.form-box_add_teach .add_new_teach_head{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #302e2e;
+    padding: 7px;
+
+}
+/* Create doctor Account CSS ends here */
+
+
+
+/* Performance Cards (Admin Dashboard) CSS starts Here */
+
+
+.admin_main_cards_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* max-width: 1200px; */
+    padding: 40px 0px;
+}
+
+.admin_main_cards_container .performance_cards{
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0,0.05),
+                inset -5px -5px 5px rgba(255, 255, 255,0.5),
+                5px 5px 5px rgba(0, 0, 0,0.05),
+                -5px -5px 5px rgba(255, 255, 255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.admin_main_cards_container .performance_cards .performance_card_box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #c9e4f8;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    /* outline: auto; */
+}
+
+.admin_main_cards_container .performance_cards:hover .performance_card_box{
+    transform: translateY(-50px);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0,0.4);
+    background: linear-gradient(45deg , #b95ce4, #4f29cc);
+
+}
+
+.admin_main_cards_container .performance_cards .performance_card_box .performance_card_contents{
+    padding: 20px;
+    text-align: center;
+}
+
+.admin_main_cards_container .performance_cards .performance_card_box .performance_card_contents h2{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0,0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents h2{
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.admin_main_cards_container .performance_cards .performance_card_box .performance_card_contents h3{
+    font-size: 1.8em;
+    color: #585858;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+
+.admin_main_cards_container .performance_cards .performance_card_box .performance_card_contents p{
+    font-size: 1em;
+    font-weight: 3000;
+    color: #585858;
+    z-index: 1;
+    transition: 0.5s; 
+}
+
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents p,
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents h3,
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents h4,
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents h5{
+    color: #fff;
+
+}
+
+.admin_main_cards_container .performance_cards .performance_card_box .performance_card_contents a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0,0.2);
+
+}
+
+
+.admin_main_cards_container .performance_cards .performance_card_box .performance_card_contents .btn-dang{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0px 10px 20px rgba(188, 175, 175, 0.2);
+    border: none;
+    outline: none;
+}
+
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents a,
+.admin_main_cards_container .performance_cards:hover .performance_card_box .performance_card_contents .btn-dang{
+    background: #ff568f;
+    border: none;
+    outline: none;
+
+}
+/* Performance Cards (Admin Dashboard) CSS ends Here */
+
+
+
+/* Toggel Add New Quiz CSS starts Here */
+
+.popup_add_new_quiz .overlay_add_new_quiz{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup_add_new_quiz .content_add_new_quiz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background-image: linear-gradient(40deg , #a7e0ff 0% , #ffb5b5 100%);
+    border-radius: 25px;
+    padding: 5px;
+    width: 85%;
+    height: 560px;
+    justify-content: center;
+    opacity: 1;
+    margin: 10% auto;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.popup_add_new_quiz .close_btn_add_new_quiz{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.popup_add_new_quiz.active .overlay_add_new_quiz{
+    display: block;
+}
+
+
+.popup_add_new_quiz.active .content_add_new_quiz{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+.popup_add_new_quiz .submit-btn_add_new_quiz{
+    width: 40%;
+    padding: 10px 30px;
+    margin-left: 15%;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+
+/* Toggel Add New Quiz CSS ends Here */
+
+
+
+/* Toggle view Card CSS Starts Here */
+
+.popup_view_card .overlay_view_card{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+    transition: 0.01s;
+
+}
+
+.popup_view_card .content_view_card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background-image: linear-gradient(40deg , #0080c5 0% , #6b08a5 100%);
+    border-radius: 25px;
+    padding: 5px;
+    width: 85%;
+    height: 460px;
+    justify-content: center;
+    opacity: 1;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: 0.01s;
+
+}
+
+.popup_view_card .close_btn_view_card{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.popup_view_card.active .overlay_view_card{
+    display: block;
+    transition: 0.5s;
+}
+
+
+.popup_view_card.active .content_view_card{
+    color: #ffffff;
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s;
+
+}
+
+
+.popup_view_card.active .content_view_card p{
+    margin: 30px;
+}
+
+.popup_view_card.active .content_view_card h1{
+    margin-bottom: 30px;
+    margin-top: none;
+}
+
+.popup_view_card.active .content_view_card h3{
+    margin: 0px;
+}
+
+/* Toggle view Card CSS ends Here */
+
+/* Question Paper CSS starts Here */
+
+.main_container_ques_paper{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: #d7ebfe;
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_container_ques_paper .ques_paper_quiz_title{
+    display: inline-block;
+    width: 85%;
+    margin: 0px;
+    padding: 10px;
+}
+.main_container_ques_paper .ques_paper_quiz_title h1{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+
+.main_container_ques_paper .ques_paper_quiz_timer{
+    display: inline-block;
+    width: 14%;
+    background-color: #e7e7e7;
+    border-radius: 15px;
+    border: #000;
+    padding: 10px;
+    border-bottom: 2px #000000 solid;
+    border-left: 2px #000000 solid;
+    border-top: 1px #000 solid;
+    border-right: 1px #000 solid;
+
+}
+
+.main_container_ques_paper .ques_paper_quiz_timer h1{
+    font-size: 15px;
+    color: rgb(145, 45, 45);
+    margin-bottom: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.quiz_cards_1_question_paper{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 90%;
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0,0.3);
+    display: inline-block;
+}
+
+.quiz_cards_1_question_paper h3{
+    font-size: 35px;
+    padding: 5px 0;
+    color: #444;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.quiz_cards_1_question_paper p{
+    font-size: 15px;
+    color: #777;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.quiz_cards_1_question_paper button{
+    width: 140px;
+    height: 40px;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.quiz_cards_1_question_paper button:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.options_quiz_question_paper_1{
+    text-align: left;
+    margin-left: 0px;
+}
+
+
+.submit_btn_question_paper{
+    width: 200px;
+    height: 50px; 
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(40deg , #56ff94 0% , #4931ffe6 100%);
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+.submit_btn_question_paper:hover{
+    letter-spacing: 2px;
+    background-image: linear-gradient(40deg , #6efda2 0% , #6753fce6 100%);
+}
+
+/* Question Paper CSS ends Here */
+
+
+
+/* Score Page CSS starts here */
+
+.main_container_score{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: #d7ebfe;
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_container_score .score_quiz_title{
+    display: inline-block;
+    width: 85%;
+    margin: 0px;
+    padding: 10px;
+}
+.main_container_score .score_quiz_title h1{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.main_container_score .score_quiz_title h2{
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #ce0101;
+}
+
+
+.quiz_cards_1_score{
+    background-color: #ffffff;
+    width: 72%;
+    height: 285px;
+    border-radius: 150px;
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background-image: linear-gradient(145deg, #ee6262 0%, #fefe00 100%);
+    position: relative;
+    z-index: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0,0.3);
+    display: inline-block;
+}
+
+.quiz_cards_1_score h3{
+    font-size: 35px;
+    padding: 5px 0;
+    color: #444;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.quiz_cards_1_score p{
+    font-size: 15px;
+    color: #777;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.quiz_cards_1_score button{
+    width: 140px;
+    height: 40px;
+    background: linear-gradient(to right ,#f43514 ,#ffad06);
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.quiz_cards_1_score button:hover{
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.options_quiz_score_1{
+    text-align: left;
+    margin-left: 0px;
+}
+
+
+.submit_btn_score{
+    width: 200px;
+    height: 50px; 
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(40deg , #56ff94 0% , #4931ffe6 100%);
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+.submit_btn_score:hover{
+    letter-spacing: 2px;
+    background-image: linear-gradient(40deg , #6efda2 0% , #6753fce6 100%);
+}
+
+
+.score_card{
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+    text-align: center;
+    justify-content: center;
+    background-image: linear-gradient(40deg , #56ff94 0% , #4931ffe6 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 10px 15px #797878;
+}
+
+.score_card h1{
+    color: #fff;
+    text-shadow: 3px 5px 7px #000;
+    top: 68px;
+    position: relative;
+}
+
+
+/* Score Page CSS ends here */
+
+
+
+/* Contact Us Page CSS starts Here */
+
+
+.contact_us_container{
+    margin: 50px;
+}
+
+.contact_us_container .contact_us_box{
+    padding: 50px;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-image: linear-gradient(40deg, #ffe25f 0%, rgb(250, 173, 150) 100%);
+    box-shadow: 5px 10px 15px #6260609a;
+}
+
+.contact_us_container .contact_us_box h1{
+    color:  #bc0000;
+}
+
+.contact_us_container .contact_us_box p{
+    font-weight: 650;
+    color: #2c2c2c;
+}
+
+/* Contact us Page CSS ends Here */
+
+/* Leader Board doctor CSS starts here */
+
+
+.leaderboard_doctor{
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.leaderboard_doctor .leader_board_quiz_number{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: 600;
+    color: #8f2222;
+}
+
+.leaderboard_score_card_head{
+    margin: 10px;
+    padding: 20px;
+    background-color: #fcbb67;
+    font-weight: bolder;
+    background-image: linear-gradient(60deg , #fcbb67 , #ff6ac3);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #545353;
+}
+
+.leaderboard_doctor .leaderboard_score_card_head h5{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    font-weight: 500;
+    color: #000;
+
+}
+
+
+.leaderboard_score_card_entry{
+    color: #353535;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: #2af598;
+    background-image: linear-gradient(40deg, #73fcba 0% , #a7cced 100%);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #8f8f8f;
+}
+
+
+.leaderboard_score_card_entry:hover{
+    color: #212121;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: #2af598;
+    background-image: linear-gradient(40deg, #16fc8d 0% , #5db1fa 100%);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #8f8f8f;
+}
+
+.leaderboard_doctor .leaderboard_score_card_entry h6{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    margin: 0px;
+
+}
+
+.patient_entry_name{
+    width: 220px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_sr{
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_corr{
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_incorr{
+    width: 220px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_Unattempted{
+    width: 170px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_score{
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+/* Leader Board doctor CSS ends here */
+
+/* Registered Users Page CSS Starts here */
+
+.registered_doctor{
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.registered_doctor .registered_quiz_number{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: 600;
+    color: #8f2222;
+}
+
+.registered_score_card_head{
+    margin: 10px;
+    padding: 20px;
+    background-color: #fcbb67;
+    font-weight: bolder;
+    background-image: linear-gradient(60deg , #fcbb67 , #ff6ac3);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #545353;
+}
+
+.registered_doctor .registered_score_card_head h5{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    font-weight: 500;
+    color: #000;
+
+}
+
+
+.registered_score_card_entry{
+    color: #353535;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: #2af598;
+    background-image: linear-gradient(40deg, #73fcba 0% , #a7cced 100%);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #8f8f8f;
+}
+
+
+.registered_score_card_entry:hover{
+    color: #212121;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: #2af598;
+    background-image: linear-gradient(40deg, #16fc8d 0% , #5db1fa 100%);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #8f8f8f;
+}
+
+.registered_doctor .registered_score_card_entry h6{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    margin: 0px;
+
+}
+
+.registered_doctor_entry_name{
+    width: 280px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.registered_doctor_entry_sr{
+    width: 130px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.registered_doctor_entry_email{
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/* Registered Users Page CSS Starts here */
+
+
+* Admin Quiz Info CSS starts Here */
+
+.leaderboard_doctor_quiz{
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.leaderboard_doctor_quiz .leader_board_quiz_number_quiz{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: 600;
+    color: #8f2222;
+}
+
+.leaderboard_score_card_head_quiz{
+    margin: 10px;
+    padding: 20px;
+    background-color: #fcbb67;
+    font-weight: bolder;
+    background-image: linear-gradient(60deg , #fcbb67 , #ff6ac3);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #545353;
+}
+
+.leaderboard_doctor_quiz .leaderboard_score_card_head_quiz h5{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    font-weight: 500;
+    color: #000;
+
+}
+
+
+.leaderboard_score_card_entry_quiz{
+    color: #353535;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: #2af598;
+    background-image: linear-gradient(40deg, #73fcba 0% , #a7cced 100%);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #8f8f8f;
+}
+
+
+.leaderboard_score_card_entry_quiz:hover{
+    color: #212121;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: #2af598;
+    background-image: linear-gradient(40deg, #16fc8d 0% , #5db1fa 100%);
+    border-radius: 15px;
+    position: sticky;
+    box-shadow: 2px 3px 5px #8f8f8f;
+}
+
+.leaderboard_doctor_quiz .leaderboard_score_card_entry_quiz h6{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    margin: 0px;
+}
+
+.patient_entry_name_quiz{
+    width: 270px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_sr_quiz{
+    width: 90px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_corr_quiz{
+    width: 230px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_incorr_quiz{
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_Unattempted_quiz{
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient_entry_score_quiz{
+    width: 90px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Admin Quiz Info CSS Ends here */
+
+
+
+
+/* New CSS */
+
+.popup_add_new_quiz_2 .content_add_new_quiz_2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background-image: linear-gradient(40deg , #a7e0ff 0% , #ffb5b5 100%);
+    border-radius: 25px;
+    padding: 5px;
+    width: 85%;
+    height: 560px;
+    justify-content: center;
+    opacity: 1;
+    margin: 1% auto;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
